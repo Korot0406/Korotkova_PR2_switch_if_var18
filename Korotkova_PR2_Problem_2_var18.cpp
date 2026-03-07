@@ -2,7 +2,7 @@
 #include <string>
 using namespace std;
 
-
+// Функция проверки корректности ввода целого числа
 bool IntUserInput(string input){
     if (input.empty())return false;
 
@@ -15,7 +15,7 @@ bool IntUserInput(string input){
     }
 }
 
-
+// Функция проверки корректности ввода вещественного числа
 bool DoubleUserInput(string input){
     if (input.empty())return false;
 
@@ -28,6 +28,7 @@ bool DoubleUserInput(string input){
     }
 }
 
+// Функция ввода целого числа с повторением запроса до корректного ввода
 int IntEnterNumber(string label){
     string raw_input;
     cout << label;
@@ -39,6 +40,7 @@ int IntEnterNumber(string label){
     return stoi(raw_input);
 }
 
+// Функция ввода вещественного числа с повторением запроса до корректного ввода
 double DoubleEnterNumber(string label){
     string raw_input;
     cout << label;
@@ -50,8 +52,8 @@ double DoubleEnterNumber(string label){
     return stod(raw_input);
 }
 
-
-
+// Функция для задания 1 (функция определения положения числа b между числами a и c)
+// Задание 1. Даны три вещественных числа a, b, c. Определить, лежит ли число b между a и c.
 void b_between_a_and_c(){
     double a, b, c;
     a = DoubleEnterNumber("Введите число a: ");
@@ -66,7 +68,8 @@ void b_between_a_and_c(){
     
 }
 
-
+// Функция для задания 2 (функция определения того, что третье число - второе по величине)
+// Задание 2. Даны четыре различных целых числа. Определить, является ли третье число вторым по величине.
 void Thrird_is_second(){
     int a, b, c, d;
     a = IntEnterNumber("Введите число a: ");
@@ -97,7 +100,8 @@ void Thrird_is_second(){
     }
 }
 
-
+// Функция для задания 3 (функция определения принадлежности месяца первому или второму полугодию)
+// Задание 3. Дано целое число m (1 ≤ m ≤ 12). Определить, относится ли данный месяц к первому или второму полугодию.
 void First_or_second_hal_year(){
     int m;
     m = IntEnterNumber("Введите месяц: ");
@@ -145,6 +149,9 @@ void First_or_second_hal_year(){
     }
 }
 
+// Функция для задания 4 (функция определния порядкового номера дня в году)
+// Задание 4. Даны натуральные числа g (год), m (месяц), d (день). Определить порядковый
+// номер этого дня в году. Рассмотреть два случая: год невисокосный и год високосный.
 void What_number(){
     int g, m, d, n;
     g = IntEnterNumber("Введите год: ");
