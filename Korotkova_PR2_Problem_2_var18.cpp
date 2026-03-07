@@ -102,7 +102,7 @@ void First_or_second_hal_year(){
     int m;
     m = IntEnterNumber("Введите месяц: ");
     while (m>12 || m<1){
-        cout << "Введите месяц: ";
+        //cout << "Введите месяц: ";
         m = IntEnterNumber("Введите месяц: ");
     }
     cout << "Результат задания 3:\n";
@@ -150,22 +150,21 @@ void What_number(){
     g = IntEnterNumber("Введите год: ");
     
     while(g<1){
-        cout << "Введите год: ";
         g = IntEnterNumber("Введите год: ");
     }
 
+    m = IntEnterNumber("Введите месяц: ");
     while(m>13 || m<1){
-        cout << "Введите месяц: ";
         m = IntEnterNumber("Введите месяц: ");
     }
     
+    d = IntEnterNumber("Введите день: ");
     while(d>31 || d<1){
-        cout << "Введите день: ";
         d = IntEnterNumber("Введите день: ");
     }
 
     cout << "Результат задания 4:\n";
-    if (g%4!=0 || (g%100==0 && g%400!=0)){
+    if (g%4==0 || (g%100==0 && g%400!=0)){
         switch (m){
             case 1:
                 n = d;
